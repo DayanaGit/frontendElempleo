@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "babel-eslint": "^10.0.2",
     "classnames": "^2.2.6",
     "eslint": "^6.0.1",
@@ -25,7 +28,8 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
