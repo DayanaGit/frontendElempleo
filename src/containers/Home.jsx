@@ -2,9 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
 import Search from '../components/Search';
-import Categories from '../components/Categories';
-import Carousel from '../components/Carousel';
-import CarouselItem from '../components/CarouselItem';
+import Select from '../components/SelectCountry';
+import SelectCity from '../components/SelectCity';
+import SelectLevEdu from '../components/SelectLevEdu';
+import SelectProfession from '../components/SelectProfession';
+import SelectIndustry from '../components/SelectIndustry';
+import SelectSector from '../components/SelectSector';
+import SelectSalary from '../components/SelectSalary';
+import SelectPosition from '../components/SelectPosition';
+import SelectWorkArea from '../components/SelectWorkArea';
+import SelectUniversities from '../components/SelectUniversities';
+import SelectGender from '../components/SelectGender';
+import SelectPracticing from '../components/SelectPracticing';
 import useInitialState from '../hooks/useInitialState';
 import '../assets/styles/App.scss';
 
@@ -26,20 +35,19 @@ const Home = ({ myList, trends, originals }) => {
           </Carousel>
         </Categories>
       }
-      <Categories title="Tendencias">
-        <Carousel>
-          {trends.map(item =>
-            <CarouselItem key={item.id} {...item} />
-          )}
-        </Carousel>
-      </Categories>
-      <Categories title="Originales de Platzi Video">
-        <Carousel>
-          {originals.map(item =>
-            <CarouselItem key={item.id} {...item} />
-          )}
-        </Carousel>
-      </Categories>
+       <Select />
+       <SelectCity />
+       <SelectLevEdu />
+       <SelectProfession />
+       <SelectIndustry />
+       <SelectSector />
+       <SelectSalary />
+       <SelectPosition />
+       <SelectWorkArea />
+       <SelectUniversities />
+       <SelectGender />
+       <SelectPracticing />
+       console.log('test2')
     </>
   );
 }
