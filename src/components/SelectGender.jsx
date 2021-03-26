@@ -7,10 +7,10 @@ import styles from '../assets/styles/components/Selection.scss'
 export default function ComboBox() {
     return (
       <Autocomplete
-        id="combo-box-demo"
+        id="BoxGender"
         options={gender}
         getOptionLabel={(option) => option.title}
-        style={{ width: 250, marginLeft:440, marginTop:850 }}
+        style={{ width: 250,marginLeft:260,marginTop:40, }}
         renderInput={(params) => <TextField {...params} label="Género" variant="outlined" />}
       />
     );

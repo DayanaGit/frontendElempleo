@@ -7,7 +7,7 @@ import styles from '../assets/styles/components/Selection.scss'
 export default function ComboBox() {
     return (
       <Autocomplete
-        id="combo-box-demo"
+        id="BoxWorkArea"
         options={areas}
         getOptionLabel={(option) => option.title}
         style={{ width: 350, marginLeft:260, marginTop:680 }}

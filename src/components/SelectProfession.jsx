@@ -21,7 +21,7 @@ export default function Tags() {
     <div className={classes.root}>
       <Autocomplete
         multiple
-        id="tags-standard"
+        id="BoxProfession"
         options={professions}
         getOptionLabel={(option) => option.title}
         renderInput={(params) => (
