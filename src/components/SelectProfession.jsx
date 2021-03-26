@@ -1,11 +1,12 @@
 import React from 'react';
-import Chip from '@material-ui/core/Chip';
+// import Chip from '@material-ui/core/Chip';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles(theme => ({
   root: {
-    float: "left",
+    float: 'left',
     marginLeft: 260,
     width: 350,
     '& > * + *': {
@@ -14,40 +15,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Tags() {
+const SelectProfession = (professions) => {
+
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Autocomplete
         multiple
-        id="BoxProfession"
-        options={professions}
-        getOptionLabel={(option) => option.title}
-        renderInput={(params) => (
+        id='tags-standard'
+        options={professions.data[0]}
+        getOptionLabel={option => option.Name}
+        renderInput={params => (
           <TextField
             {...params}
-            variant="standard"
-            label="Profesión"
-            placeholder="Profesiones"
+            variant='standard'
+            label='Profesión'
+            placeholder='Profesiones'
           />
         )}
       />
     </div>
   );
-}
+};
 
-
-const professions = [
-  { title: 'The Shawshank Redemption', year: 1994 },
-  { title: 'The Godfather', year: 1972 },
-  { title: 'The Godfather: Part II', year: 1974 },
-  { title: 'Interstellar', year: 2014 },
-  { title: 'Toy Story', year: 1995 },
-  { title: 'Bicycle Thieves', year: 1948 },
-  { title: 'The Kid', year: 1921 },
-  { title: 'Inglourious Basterds', year: 2009 },
-  { title: 'Snatch', year: 2000 },
-  { title: '3 Idiots', year: 2009 },
-  { title: 'Monty Python and the Holy Grail', year: 1975 },
-];
+export default SelectProfession;
