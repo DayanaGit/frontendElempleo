@@ -9,9 +9,9 @@ export default function ComboBox() {
       <Autocomplete
         id="combo-box-demo"
         options={positions}
-        getOptionLabel={(option) => option.title}
-        style={{ width: 350, marginLeft:260,marginTop:85, float:"left"}}
-        renderInput={(params) => <TextField {...params} label="Cargo" variant="outlined" />}
+        getOptionLabel={option => option.title}
+        style={{ width: 350, marginLeft: 260,marginTop: 85, float:"left" }}
+        renderInput={params => <TextField {...params} label='Cargo' variant="outlined" />}
       />
     );
     

@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react';
 
 const useInitialState = (API) => {
-  const [ videos, setVideos ] = useState([]);
+  const UrlBase = 'http://localhost:3001/';
+  const Url = UrlBase + API;
+  console.log(Url);
+
+  const [tercero, setTercero] = useState([]);
   useEffect(() => {
-    fetch(API)
+    fetch(Url)
       .then(response => response.json())
-      .then(data => setVideos(data));
+      .then(data => setTercero(data));
   }, []);
-  return videos;
+  return tercero;
 };
 
 export default useInitialState;
