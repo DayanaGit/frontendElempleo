@@ -20,28 +20,33 @@ import '../assets/styles/App.scss';
 
 const Home = () => {
 
-  const API = 'api/professions';
   const salary = 'api/salaries';
   const industry = 'api/industries';
+  const area = 'api/areas';
 
-  const initialState = useInitialState(API);
   const salaries = useInitialState(salary);
   const industries = useInitialState(industry);
-  // console.log(initialState);
-  // console.log(initialState2);
-  return initialState.length === 0 || salaries.length === 0 || industries.length === 0 ? <h1>Loading...</h1> : (
+  const areas = useInitialState(area);
+
+  return areas.length === 0 || salaries.length === 0 || industries.length === 0 ? (
+    <center>
+      {' '}
+      <h1>Loading...</h1>
+      {' '}
+    </center>
+  ) : (
 
     <>
       <Header />
       <Select />
       <SelectCity />
       <SelectLevEdu />
-      <SelectProfession {...initialState} />
+      <SelectProfession />
       <SelectIndustry {...industries} />
       <SelectSector />
       <SelectSalary {...salaries} />
       <SelectPosition />
-      <SelectWorkArea />
+      <SelectWorkArea {...areas} />
       <SelectUniversities />
       <SelectGender />
       <SelectPracticing />

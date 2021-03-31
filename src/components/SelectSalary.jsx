@@ -1,41 +1,24 @@
 import React from 'react';
-// import Chip from '@material-ui/core/Chip';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import handleInput from '../hooks/status';
+// import { makeStyles } from '@material-ui/core/styles';
+// import styles from '../assets/styles/components/Selection.scss'
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    float: 'left',
-    marginLeft: 260,
-    marginTop: 90,
-    width: 350,
-    '& > * + *': {
-      marginTop: theme.spacing(260),
-    },
-  },
-}));
-
-const selectSalary = (salaries) => {
-  const classes = useStyles();
+const selectSalary = (salary) => {
 
   return (
-    <div className={classes.root}>
-      <Autocomplete
-        multiple
-        id='tags-standard'
-        options={salaries.data[0]}
-        getOptionLabel={option => option.Range}
-        renderInput={params => (
-          <TextField
-            {...params}
-            variant='standard'
-            label='Aspiración Salarial'
-            placeholder='Salarios'
-          />
-        )}
-      />
-    </div>
+    <Autocomplete
+      id='salary'
+      options={salary.data[0]}
+      getOptionLabel={option => option.Range}
+      style={{ width: 350, marginLeft: 260, marginTop: 370 }}
+      renderInput={params => <TextField {...params} label='Salarios' variant='outlined' />}
+      onChange={(event, newValue) => {
+        handleInput(newValue, 'salary');
+      }}
+
+    />
   );
 };
 
