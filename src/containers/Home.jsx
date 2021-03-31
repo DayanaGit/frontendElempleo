@@ -38,30 +38,23 @@ const Home = () => {
 
     <>
       <Header />
-      <Select />
-      <SelectCity />
-      <SelectLevEdu />
-      <SelectProfession />
-      <SelectIndustry {...industries} />
-      <SelectSector />
-      <SelectSalary {...salaries} />
-      <SelectPosition />
-      <SelectWorkArea {...areas} />
-      <SelectUniversities />
-      <SelectGender />
-      <SelectPracticing />
-
+      <form>
+        <Select />
+        <SelectCity />
+        <SelectLevEdu />
+        <SelectProfession />
+        <SelectIndustry {...industries} />
+        <SelectSector />
+        <SelectSalary {...salaries} />
+        <SelectPosition />
+        <SelectWorkArea {...areas} />
+        <SelectUniversities />
+        <SelectGender />
+        <SelectPracticing />
+        <input type='submit' value='Submit' />
+      </form>
     </>
   );
 };
 
-// const mapStateToProps = state => {
-//   return {
-//     myList: state.myList,
-//     trends: state.trends,
-//     originals: state.originals,
-//   };
-// };
-
-// export default connect(mapStateToProps, null)(Home);
 export default Home;

@@ -13,6 +13,7 @@ export default function ComboBox() {
       id='evels'
       options={levels}
       getOptionLabel={option => option.Name}
+
       style={{ width: 350, marginLeft: 260, marginTop: 200 }}
       renderInput={params => <TextField {...params} label='Nivel Educativo' variant='outlined' />}
       onChange={(event, newValue) => {

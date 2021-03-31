@@ -12,7 +12,7 @@ const SelectWorkArea = (Work) => {
       id='WorkArea'
       options={Work.data[0]}
       getOptionLabel={option => option.Name}
-      style={{ width: 350, marginLeft: 260, marginTop: 370 }}
+      style={{ width: 350, marginLeft: 260, marginTop: 680 }}
       renderInput={params => <TextField {...params} label='Area' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'workArea');
