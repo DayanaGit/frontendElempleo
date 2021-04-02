@@ -1,5 +1,9 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
+
+// eslint-disable-next-line import/named
+import { handleSubmit } from '../actions';
 // import { connect } from 'react-redux';
 import Header from '../components/Header';
 // import Search from '../components/Search';
@@ -14,6 +18,7 @@ import SelectPosition from '../components/SelectPosition';
 import SelectWorkArea from '../components/SelectWorkArea';
 import SelectUniversities from '../components/SelectUniversities';
 import SelectGender from '../components/SelectGender';
+import Result from '../components/Result';
 import SelectPracticing from '../components/SelectPracticing';
 import useInitialState from '../hooks/useInitialState';
 import '../assets/styles/App.scss';
@@ -38,21 +43,22 @@ const Home = () => {
 
     <>
       <Header />
-      <form>
-        <Select />
-        <SelectCity />
-        <SelectLevEdu />
-        <SelectProfession />
-        <SelectIndustry {...industries} />
-        <SelectSector />
-        <SelectSalary {...salaries} />
-        <SelectPosition />
-        <SelectWorkArea {...areas} />
-        <SelectUniversities />
-        <SelectGender />
-        <SelectPracticing />
-        <input type='submit' value='Submit' />
-      </form>
+      {/* <form onSubmit={handleSubmit}> */}
+      <Select />
+      <SelectCity />
+      <SelectLevEdu />
+      <SelectProfession />
+      <SelectIndustry {...industries} />
+      <SelectSector />
+      <SelectSalary {...salaries} />
+      <SelectPosition />
+      <SelectWorkArea {...areas} />
+      <SelectUniversities />
+      <SelectGender />
+      <SelectPracticing />
+      <button className='button' onClick={handleSubmit}>Iniciar sesión</button>
+      <Result />
+      {/* </form> */}
     </>
   );
 };
