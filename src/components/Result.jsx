@@ -1,20 +1,35 @@
 import React from 'react';
 import '../assets/styles/components/result.scss';
+import { connect } from 'react-redux';
+import { handleSubmit1 } from '../actions';
 
-const Result = () => (
-  <center>
-    <div className='result'>
-      <h1>Resultados</h1>
-         
-      <h3>Valores</h3>
-      <p />
+const Result = (props) => {
+  console.log(props);
+  console.log('estoy result');
+  const { query } = props;
+  return (
+    <center>
+      <button className='button' onClick={handleSubmit1}>Iniciar sesión</button>
+      <div className='result'>
 
-      <h3>Query</h3>
-      <p />
+        <h1>Resultados</h1>
 
+        <h3>Valores</h3>
+        <p />
 
-    </div>
-  </center>
-);
+        <h3>Query</h3>
+        <p>
+          {' '}
+          { query }
+        </p>
 
-export default Result;
+      </div>
+    </center>
+  );
+};
+
+const mapDispatchToProps = {
+  handleSubmit1,
+};
+
+export default connect(null, mapDispatchToProps)(Result);

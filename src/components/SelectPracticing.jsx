@@ -5,7 +5,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import styles from '../assets/styles/components/Selection.scss';
-
+import { handleInput } from '../actions';
 
 
 export default function CheckboxLabels() {

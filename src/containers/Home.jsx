@@ -3,8 +3,7 @@
 import React from 'react';
 
 // eslint-disable-next-line import/named
-import { handleSubmit } from '../actions';
-// import { connect } from 'react-redux';
+
 import Header from '../components/Header';
 // import Search from '../components/Search';
 import Select from '../components/SelectCountry';
@@ -21,9 +20,11 @@ import SelectGender from '../components/SelectGender';
 import Result from '../components/Result';
 import SelectPracticing from '../components/SelectPracticing';
 import useInitialState from '../hooks/useInitialState';
+import { connect } from 'react-redux';
 import '../assets/styles/App.scss';
 
-const Home = () => {
+const Home = (props) => {
+  console.log(props);
 
   const salary = 'api/salaries';
   const industry = 'api/industries';
@@ -56,11 +57,13 @@ const Home = () => {
       <SelectUniversities />
       <SelectGender />
       <SelectPracticing />
-      <button className='button' onClick={handleSubmit}>Iniciar sesión</button>
+     
       <Result />
       {/* </form> */}
     </>
   );
 };
 
-export default Home;
+// export default Home;
+export default connect(null, null)(Home);
+
