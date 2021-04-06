@@ -24,6 +24,7 @@ export default function CheckboxLabels() {
           <Checkbox
             checked={state.checkedB}
             onChange={handleChange}
+            style={{ marginLeft:100 }}
             name="checkedB"
             color="primary"
           />
