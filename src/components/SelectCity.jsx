@@ -11,7 +11,7 @@ const SelectCity = () => {
       id='City'
       options={Cities}
       getOptionLabel={option => option.name}
-      style={{ width: 350, marginTop: 20, marginLeft: 260, paddingBlock: 10, float: 'left' }}
+      style={{ width: 350, marginTop: 100, marginLeft: 260, float: 'left' }}
       renderInput={params => <TextField {...params} label='Cuidad' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'city');

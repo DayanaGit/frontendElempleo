@@ -1,8 +1,11 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import styles from '../assets/styles/components/Selection.scss';
-import { handleInput } from '../actions';
+
 
 
 export default function CheckboxLabels() {
@@ -21,13 +24,12 @@ export default function CheckboxLabels() {
           <Checkbox
             checked={state.checkedB}
             onChange={handleChange}
-            style={{ marginLeft:300}}
+            style={{marginLeft:260}}
             name="checkedB"
             color="primary"
-            
           />
         }
-        label="Practicante"
+        label="Personas que tienen la hoja de vida completa"
       />
   );
 }

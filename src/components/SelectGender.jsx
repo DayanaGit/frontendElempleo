@@ -7,9 +7,10 @@ export default function ComboBox() {
   return (
     <Autocomplete
       id='gender'
+      // eslint-disable-next-line no-use-before-define
       options={gender}
       getOptionLabel={option => option.title}
-      style={{ width: 250, marginLeft: 440, marginTop: 850 }}
+      style={{ width: 310, marginLeft: 260, float:'left' }}
       renderInput={params => <TextField {...params} label='Género' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'gender');

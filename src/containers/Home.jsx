@@ -1,11 +1,8 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
-
-// eslint-disable-next-line import/named
-
+import { connect } from 'react-redux';
 import Header from '../components/Header';
-// import Search from '../components/Search';
 import Select from '../components/SelectCountry';
 import SelectCity from '../components/SelectCity';
 import SelectLevEdu from '../components/SelectLevEdu';
@@ -19,8 +16,17 @@ import SelectUniversities from '../components/SelectUniversities';
 import SelectGender from '../components/SelectGender';
 import Result from '../components/Result';
 import SelectPracticing from '../components/SelectPracticing';
+import SelectLanguage from '../components/SelectLanguage';
+import SelectPercentage from '../components/SelectPercentage';
+import SelectExperience from '../components/SelectExperience';
+import SelectAge from '../components/SelectAge';
+import SelectHvAct from '../components/SelectHvActualization';
+import SelectPerEmail from '../components/SelectPerEmail';
+import SelectPerRecInf from '../components/SelectPerRecInf';
+import SelectPerHvInc from '../components/SelectPerHvInc';
+import SelectPerEmailInv from '../components/SelectPerEmailInv';
+import Top from '../components/Top';
 import useInitialState from '../hooks/useInitialState';
-import { connect } from 'react-redux';
 import '../assets/styles/App.scss';
 
 const Home = (query, result) => {
@@ -29,12 +35,16 @@ const Home = (query, result) => {
   const salary = 'api/salaries';
   const industry = 'api/industries';
   const area = 'api/areas';
+  const position = 'api/position';
+  const university = 'api/universities';
 
   const salaries = useInitialState(salary);
   const industries = useInitialState(industry);
   const areas = useInitialState(area);
+  const positions = useInitialState(position);
+  const universities = useInitialState(university);
 
-  return areas.length === 0 || salaries.length === 0 || industries.length === 0 ? (
+  return areas.length === 0 || salaries.length === 0 || industries.length === 0 || positions.length === 0 || universities.length === 0 ? (
     <center>
       {' '}
       <h1>Loading...</h1>
@@ -44,21 +54,31 @@ const Home = (query, result) => {
 
     <>
       <Header />
-      {/* <form onSubmit={handleSubmit}> */}
-      <Select />
-      <SelectCity />
-      <SelectLevEdu />
-      <SelectProfession />
-      <SelectIndustry {...industries} />
-      <SelectSector />
-      <SelectSalary {...salaries} />
-      <SelectPosition />
-      <SelectWorkArea {...areas} />
-      <SelectUniversities />
-      <SelectGender />
-      <SelectPracticing />
+      <form>
+        <Select />
+        <SelectCity />
+        <SelectLevEdu />
+        <SelectProfession />
+        <SelectIndustry {...industries} />
+        <SelectSector />
+        <SelectSalary {...salaries} />
+        <SelectPosition {...positions}/>
+        <SelectWorkArea {...areas} />
+        <SelectUniversities {...universities} />
+        <SelectLanguage />
+        <SelectPercentage />
+        <SelectExperience />
+        <SelectAge />
+        <SelectHvAct />
+        <SelectPracticing />
+        <SelectPerEmail />
+        <SelectPerRecInf />
+        <SelectPerHvInc />
+        <SelectPerEmailInv />
+        <SelectGender />
+        <Top />    
+      </form>
       <Result {...query} {...result} />
-      {/* </form> */}
     </>
   );
 };
