@@ -2111,7 +2111,7 @@ const SelectProfessions = () => {
       id='Professions'
       options={profession}
       getOptionLabel={option => option.Name}
-      style={{ width: 350, marginLeft: 260, marginTop: 200, float: 'left' }}
+      style={{ width: 350, marginLeft: 260, float: 'left' }}
       renderInput={params => <TextField {...params} label='Profesiones' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'professions');

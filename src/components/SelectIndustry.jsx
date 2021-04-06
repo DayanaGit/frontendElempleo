@@ -12,7 +12,7 @@ const SelectIndustry = (industries) => {
       id='industry'
       options={industries.data[0]}
       getOptionLabel={option => option.Name}
-      style={{ width: 350, marginLeft: 260, marginTop: 370 }}
+      style={{ width: 350, marginLeft: 260 }}
       renderInput={params => <TextField {...params} label='Industria' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'industry');

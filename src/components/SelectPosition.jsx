@@ -4,14 +4,14 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import handleInput from '../hooks/status';
 
-const SelectPositions = () => {
+const SelectPositions = (positions) => {
 
   return (
     <Autocomplete
-      id='industry'
-      options={positions}
-      getOptionLabel={option => option.title}
-      style={{ width: 350, marginLeft: 260, marginTop: 85, float: "left" }}
+      id='position'
+      options={positions.data[0]}
+      getOptionLabel={option => option.Name}
+      style={{ width: 350, marginLeft: 260, float: "left" }}
       renderInput={params => <TextField {...params} label='Cargo' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'Position');
@@ -20,13 +20,6 @@ const SelectPositions = () => {
     />
   );
 };
-const positions = [
-  { title: 'Abogado' },
-  { title: 'Administrador' },
-  { title: 'Almacenista' },
-  { title: 'Analista' },
-  { title: 'Asistente' },
-  { title: 'Auditor' },
-];
+
 
 export default SelectPositions;

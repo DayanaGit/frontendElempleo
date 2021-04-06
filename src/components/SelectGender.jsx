@@ -10,7 +10,7 @@ export default function ComboBox() {
         id='gender'
         options={gender}
         getOptionLabel={(option) => option.title}
-        style={{ width: 250, marginLeft:440, marginTop: 850 }}
+        style={{ width: 250, marginLeft:440}}
         renderInput={(params) => <TextField {...params} label='Género' variant='outlined' />}
       />
     );

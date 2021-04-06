@@ -77,3 +77,5 @@ dist/
  _cacache/
  anonymous-cli-metrics.json
  node-sass/
+package.json
+package-lock.json

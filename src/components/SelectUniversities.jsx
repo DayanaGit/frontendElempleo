@@ -5507,14 +5507,14 @@ const university = [
   },
 ];
 
-const selectuniversity = () => {
+const selectuniversity = (universities) => {
 
   return (
     <Autocomplete
       id='university'
-      options={university}
+      options={universities.data[0]}
       getOptionLabel={option => option.MercantileName}
-      style={{ width: 350, marginLeft: 260, marginTop: 370 }}
+      style={{ width: 350, marginLeft: 260,float:"left" }}
       renderInput={params => <TextField {...params} label='Universidades' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'university');

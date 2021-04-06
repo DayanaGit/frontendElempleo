@@ -23,12 +23,16 @@ const Home = () => {
   const salary = 'api/salaries';
   const industry = 'api/industries';
   const area = 'api/areas';
+  const position = 'api/position';
+  const university = 'api/universities';
 
   const salaries = useInitialState(salary);
   const industries = useInitialState(industry);
   const areas = useInitialState(area);
+  const positions = useInitialState(position);
+  const universities = useInitialState(university);
 
-  return areas.length === 0 || salaries.length === 0 || industries.length === 0 ? (
+  return areas.length === 0 || salaries.length === 0 || industries.length === 0 || positions.length === 0 || universities.length === 0 ? (
     <center>
       {' '}
       <h1>Loading...</h1>
@@ -46,12 +50,10 @@ const Home = () => {
         <SelectIndustry {...industries} />
         <SelectSector />
         <SelectSalary {...salaries} />
-        <SelectPosition />
+        <SelectPosition {...positions}/>
         <SelectWorkArea {...areas} />
-        <SelectUniversities />
-        <SelectGender />
-        <SelectPracticing />
-        <input type='submit' value='Submit' />
+        <SelectUniversities {...universities} />
+
       </form>
     </>
   );

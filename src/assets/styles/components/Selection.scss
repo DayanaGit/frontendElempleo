@@ -9,10 +9,12 @@
 
 .MuiInputLabel-outlined{
     color:white !important;
+    padding-top: 45px !important;
 }
 
 .MuiFormControl-fullWidth {
     float: left;
+    padding-top: 45px !important;
 }
 
 .MuiInputLabel-animated {
@@ -34,4 +36,7 @@
 .MuiFormControlLabel-root {
     margin-top: 10px;
     margin-left: 350px;
+}
+.container{
+    margin-top: 10px;
 }

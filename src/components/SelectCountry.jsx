@@ -13,7 +13,7 @@ const SelectCountry = () => {
       id='Country'
       options={Countries}
       getOptionLabel={option => option.Name}
-      style={{ width: 350, marginLeft: 260, marginTop: 20, paddingBlock: 10, float: 'left' }}
+      style={{ width: 350,marginTop: 100, marginLeft: 260,float: 'left' }}
       renderInput={params => <TextField {...params} label='Pais' variant='outlined' />}
       onChange={(event, newValue) => {
         handleInput(newValue, 'country');
