@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 300,
     marginLeft:260,
+    marginTop:30,
     float:"left",
     color:"white",
   },

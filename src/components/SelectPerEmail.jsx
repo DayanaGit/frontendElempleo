@@ -24,13 +24,12 @@ export default function CheckboxLabels() {
           <Checkbox
             checked={state.checkedB}
             onChange={handleChange}
-            style={{ marginLeft:300}}
+            style={{marginLeft:260}}
             name="checkedB"
             color="primary"
-            
           />
         }
-        label="Practicante"
+        label="Personas que quieren ser incluidas en listas de correo de otros productos"
       />
   );
 }

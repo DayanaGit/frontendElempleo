@@ -10,7 +10,7 @@ export default function ComboBox() {
         id="BoxLanguage"
         options={languages}
         getOptionLabel={(option) => option.title}
-        style={{ width: 350,marginTop:800,marginLeft:260}}
+        style={{ width: 350,marginLeft:260}}
         renderInput={(params) => <TextField {...params} label="Idioma" variant="outlined" />}
       />
     );

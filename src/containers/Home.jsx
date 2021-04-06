@@ -15,7 +15,20 @@ import SelectWorkArea from '../components/SelectWorkArea';
 import SelectUniversities from '../components/SelectUniversities';
 import SelectGender from '../components/SelectGender';
 import SelectPracticing from '../components/SelectPracticing';
+import SelectLanguage from '../components/SelectLanguage';
+import SelectPercentage from '../components/SelectPercentage';
+import SelectExperience from '../components/SelectExperience';
+import SelectAge from '../components/SelectAge';
+import SelectHvAct from '../components/SelectHvActualization';
+import SelectHvActEnd from '../components/SelectHvActEnd';
+import SelectPerEmail from '../components/SelectPerEmail';
+import SelectPerRecInf from '../components/SelectPerRecInf';
+import SelectPerHvInc from '../components/SelectPerHvInc';
+import SelectPerEmailInv from '../components/SelectPerEmailInv';
+import Top from '../components/Top';
+import Button from '../components/SearchButton';
 import useInitialState from '../hooks/useInitialState';
+
 import '../assets/styles/App.scss';
 
 const Home = () => {
@@ -53,7 +66,19 @@ const Home = () => {
         <SelectPosition {...positions}/>
         <SelectWorkArea {...areas} />
         <SelectUniversities {...universities} />
-
+        <SelectLanguage />
+        <SelectPercentage />
+        <SelectExperience />
+        <SelectAge />
+        <SelectHvAct /> 
+        <SelectPracticing />
+        <SelectPerEmail />
+        <SelectPerRecInf />
+        <SelectPerHvInc />
+        <SelectPerEmailInv />
+        <SelectGender />
+        <Top />
+        <Button />
       </form>
     </>
   );

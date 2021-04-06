@@ -4,14 +4,11 @@ import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-   
-    
+    marginTop:800,
+    marginLeft:260,
   },
   textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    marginTop:60,
-    width: 200,
+    width: 310,
   },
 }));
 
@@ -24,6 +21,16 @@ export default function DatePickers() {
         id="date"
         label="Actualizacion Hv Entre"
         type="date"
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+      <TextField
+        id="dateEnd"
+        label="Y"
+        type="date"
+        style={{marginLeft:310}}
         className={classes.textField}
         InputLabelProps={{
           shrink: true,
