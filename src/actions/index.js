@@ -8,39 +8,44 @@ export const handleInput = (event, id) => {
   console.log(from);
 };
 
-export const handleSubmit1 = () => ({
-  type: 'SET_FAVORITE',
-  payload: 'PRUEBA',
-});
+export const handleSubmit1 = () => {
+
+  return function (dispatch) {
+    // eslint-disable-next-line no-use-before-define
+    return handleSubmit().then((comments) => {
+      dispatch({
+        type: 'SET_FAVORITE',
+        comments,
+      });
+    });
+  };
+};
 
 export const handleSubmit = async () => {
   const url = 'http://localhost:3001/api/consulta';
   console.log(from);
+
   try {
     const fetchResponse = await fetch(url, {
-      method: 'POST', // or 'PUT'
-      body: JSON.stringify(from), // data can be `string` or {object}!
+      method: 'POST',
+      body: JSON.stringify(from),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    const data = await fetchResponse.json();
-    console.log(data);
+    const result = await fetchResponse.json();
+    console.log(result);
+    const { query } = result.data;
+    const results = result.data.result;
     return {
-      type: 'SET_FAVORITE',
-      payload: data,
-
+      query,
+      results,
     };
-       
+
   } catch (e) {
     return e;
   }
 };
-
-export const setFavorite = payload => ({
-  type: 'SET_FAVORITE',
-  payload,
-});
 
 export const loginRequest = payload => ({
   type: 'LOGIN_REQUEST',

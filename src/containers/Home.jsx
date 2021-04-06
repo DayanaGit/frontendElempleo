@@ -23,8 +23,8 @@ import useInitialState from '../hooks/useInitialState';
 import { connect } from 'react-redux';
 import '../assets/styles/App.scss';
 
-const Home = (props) => {
-  console.log(props);
+const Home = (query, result) => {
+  console.log(query);
 
   const salary = 'api/salaries';
   const industry = 'api/industries';
@@ -57,13 +57,17 @@ const Home = (props) => {
       <SelectUniversities />
       <SelectGender />
       <SelectPracticing />
-     
-      <Result />
+      <Result {...query} {...result} />
       {/* </form> */}
     </>
   );
 };
 
-// export default Home;
-export default connect(null, null)(Home);
+const mapStateToProps = (state) => {
+  return {
+    query: state.query,
+    result: state.result,
+  };
+};
 
+export default connect(mapStateToProps, null)(Home);

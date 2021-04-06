@@ -1,11 +1,11 @@
 const reducer = (state, action) => {
-  console.log(action);
-  console.log('llegue aqui');
   switch (action.type) {
     case 'SET_FAVORITE':
       return {
         ...state,
-        query: 'prueba',
+        query: action.comments.query,
+        result: action.comments.results,
+
       };
     case 'DELETE_FAVORITE':
       return {

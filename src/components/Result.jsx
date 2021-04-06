@@ -4,25 +4,29 @@ import { connect } from 'react-redux';
 import { handleSubmit1 } from '../actions';
 
 const Result = (props) => {
-  console.log(props);
-  console.log('estoy result');
-  const { query } = props;
+
+  const handleSetFavorite = () => {
+    props.handleSubmit1();
+  };
+  const { result, query } = props;
+
   return (
     <center>
-      <button className='button' onClick={handleSubmit1}>Iniciar sesión</button>
+      <button
+        className='button'
+        onClick={handleSetFavorite}
+      >
+Obtener Resultados
+      </button>
       <div className='result'>
 
         <h1>Resultados</h1>
 
         <h3>Valores</h3>
-        <p />
+        <p className='carousel-item__details--title'>{result}</p>
 
         <h3>Query</h3>
-        <p>
-          {' '}
-          { query }
-        </p>
-
+        <p className='carousel-item__details--title'>{query}</p>
       </div>
     </center>
   );

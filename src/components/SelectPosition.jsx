@@ -8,7 +8,7 @@ const SelectPositions = () => {
 
   return (
     <Autocomplete
-      id='industry'
+      id='Position'
       options={positions}
       getOptionLabel={option => option.title}
       style={{ width: 350, marginLeft: 260, marginTop: 85, float: "left" }}

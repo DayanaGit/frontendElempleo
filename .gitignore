@@ -75,6 +75,7 @@ yarn-error.log
 _cacache/
 anonymous-cli-metrics.json
 node-sass/
+package-lock.json
 
 # Build
 dist/

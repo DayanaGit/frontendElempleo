@@ -5,7 +5,6 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import { handleInput } from '../actions';
 
 export default function ComboBox() {
-  console.log(levels);
   return (
     <Autocomplete
       id='evels'

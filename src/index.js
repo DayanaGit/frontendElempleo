@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
-  'user': {},
-  'result': [],
-  'query': [],
+  'user': '',
+  'result': '',
+  'query': '',
 
 };
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 console.log(initialState);
-const store = createStore(reducer,initialState);
+const store = createStore(reducer, initialState, applyMiddleware(thunk));
+
 console.log(store);
 
 ReactDOM.render(

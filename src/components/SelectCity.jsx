@@ -8,7 +8,7 @@ const SelectCity = () => {
 
   return (
     <Autocomplete
-      id='Country'
+      id='City'
       options={Cities}
       getOptionLabel={option => option.name}
       style={{ width: 350, marginTop: 20, marginLeft: 260, paddingBlock: 10, float: 'left' }}
