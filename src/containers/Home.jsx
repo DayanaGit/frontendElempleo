@@ -55,6 +55,7 @@ const Home = (query, result) => {
     <>
       <Header />
       <form>
+        <h1 class="t-stroke t-shadow">SEGMENTADOR</h1>
         <Select />
         <SelectCity />
         <SelectLevEdu />
@@ -70,11 +71,6 @@ const Home = (query, result) => {
         <SelectExperience />
         <SelectAge />
         <SelectHvAct />
-        <SelectPracticing />
-        <SelectPerEmail />
-        <SelectPerRecInf />
-        <SelectPerHvInc />
-        <SelectPerEmailInv />
         <SelectGender />
         <Top />    
       </form>

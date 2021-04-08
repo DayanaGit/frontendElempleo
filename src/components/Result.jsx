@@ -8,8 +8,9 @@ import { handleSubmit1 } from '../actions';
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    marginLeft:150,
+    alignContent:"center",
     marginTop:50,
+    marginRight:490,
   },
 }));
 
@@ -34,11 +35,10 @@ const Result = (props) => {
       </Button>
       <div className='result'>
 
-        <h1>Resultados</h1>
+       <h1 className='resulth'>Resultados</h1>
 
-        <h3>Valores</h3>
+        <h3 className='resulth'>Valores</h3>
         <p className='carousel-item__details--title'>{result}</p>
-
         <h3>Query</h3>
         <p className='carousel-item__details--title'>{query}</p>
       </div>

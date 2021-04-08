@@ -13,7 +13,7 @@ export const handleInput = (event, id) => {
 };
 
 export const handleSubmit = () => {
-  const url = 'http://localhost:3001/api/consulta';
+  const url = 'http://localhost:3000/api/consulta';
   fetch(url, {
     method: 'POST', // or 'PUT'
     body: JSON.stringify(from), // data can be `string` or {object}!

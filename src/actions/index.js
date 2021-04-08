@@ -22,7 +22,7 @@ export const handleSubmit1 = () => {
 };
 
 export const handleSubmit = async () => {
-  const url = 'http://localhost:3001/api/consulta';
+  const url = 'http://localhost:3000/api/consulta';
   console.log(from);
 
   try {
